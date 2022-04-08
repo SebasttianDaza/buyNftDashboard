@@ -1,13 +1,12 @@
-import {Container, Row, Col} from "react-bootstrap";
+import Container from "react-bootstrap/Container";
 
-import Navbar from "./Pages/Nav/nav";
+import Navegation from "./Pages/Nav/nav";
 
 const App = () => {
   return (
     <>
-      <Container fluid>
-        <Navbar />
-      </Container>
+      <Navegation />
+      <Container fluid />
     </>
   );
 };
