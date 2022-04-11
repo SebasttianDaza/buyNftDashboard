@@ -24,17 +24,13 @@ const Navegation = () => {
         onSelect={(selectedKey) => alert(`selected ${selectedKey}`)}
       >
         <Navbar.Brand className="mt-4 mb-4 brand-media text-left">
-          <h1 className="text-light text-left text-uppercase">BuyNft</h1>
+          <h1 className="text-primary text-left text-uppercase">BuyNft</h1>
         </Navbar.Brand>
         <Container fluid className="bg-dark">
           <Navbar.Toggle aria-controls="responsive-navbar-nav" />
           <Navbar.Collapse id="responsive-navbar-nav">
             <Nav className="me-auto flex-column">
-              <NavItem
-                text="Dashboard"
-                classPrimary="text-secondary"
-                icon={<StarFill size={26} />}
-              />
+              <NavItem text="Dashboard" classPrimary="text-primary" icon={<StarFill size={26} />} />
               <NavItem classPrimary="text-secondary" text="Market" icon={<Shop size={26} />} />
               <NavItem
                 classPrimary="text-secondary"
@@ -48,7 +44,7 @@ const Navegation = () => {
               />
               <hr className="bg-secondary border-3 border-top border-white mt-5 mb-4" />
               <Navbar.Brand>
-                <p className="text-left text-uppercase text-light ">my profile</p>
+                <p className="text-primary text-uppercase">my profile</p>
               </Navbar.Brand>
               <NavItem
                 classPrimary="text-secondary"

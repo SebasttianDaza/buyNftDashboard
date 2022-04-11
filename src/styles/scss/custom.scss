@@ -1,0 +1,14 @@
+
+// ? My variables
+
+$principal: #D03852;
+$prinipal-background : #181717;
+
+
+// !Modify variable bootstrap
+
+$primary: $principal;
+$dark: $prinipal-background;
+
+
+@import "../../../node_modules/bootstrap/scss/bootstrap";
