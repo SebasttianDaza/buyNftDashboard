@@ -1,10 +1,11 @@
 import Form from "react-bootstrap/Form";
 import InputGroup from "react-bootstrap/InputGroup";
 import {Search} from "react-bootstrap-icons";
+import PropTypes from "prop-types";
 
-const ComponentForm = ({}) => {
+const ComponentForm = ({breakpoint}) => {
   return (
-    <Form className="mt-4 mb-4">
+    <Form className={breakpoint === false ? "d-none" : "mt-4 mb-4"}>
       <InputGroup className="mb-3">
         <InputGroup.Text className="bg-dark text-secondary border-dark">
           <Search size={26} />
@@ -17,6 +18,10 @@ const ComponentForm = ({}) => {
       </InputGroup>
     </Form>
   );
+};
+
+ComponentForm.propTypes = {
+  breakpoint: PropTypes.bool,
 };
 
 export default ComponentForm;

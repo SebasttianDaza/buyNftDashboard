@@ -11,10 +11,13 @@ import {
   ClockHistory,
   Gear,
 } from "react-bootstrap-icons";
+import PropTypes from "prop-types";
 
 import NavItem from "../../Components/NavItem/NavItem";
+import ComponentForm from "../../Components/Form/form";
+import ComponentProfile from "../../Components/Profile/profile";
 
-const Navegation = () => {
+const Navegation = ({breakpoint}) => {
   return (
     <>
       <Navbar
@@ -28,8 +31,12 @@ const Navegation = () => {
         </Navbar.Brand>
         <Container fluid className="bg-dark">
           <Navbar.Toggle aria-controls="responsive-navbar-nav" className="bg-primary" />
+          {/* if it's to more 992px show different */}
+          <ComponentProfile breakpoint={breakpoint} showChild={breakpoint} />
           <Navbar.Collapse id="responsive-navbar-nav">
             <Nav className="me-auto flex-column">
+              {/* If it's to more 992px not show here */}
+              <ComponentForm breakpoint={breakpoint} />
               <NavItem text="Dashboard" classPrimary="text-primary" icon={<StarFill size={26} />} />
               <NavItem classPrimary="text-secondary" text="Market" icon={<Shop size={26} />} />
               <NavItem
@@ -68,6 +75,10 @@ const Navegation = () => {
       </Navbar>
     </>
   );
+};
+
+Navegation.propTypes = {
+  breakpoint: PropTypes.bool,
 };
 
 export default Navegation;
