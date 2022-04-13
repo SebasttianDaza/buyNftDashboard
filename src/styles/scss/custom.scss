@@ -3,12 +3,18 @@
 
 $principal: #D03852;
 $prinipal-background : #181717;
-
+$background-body:#1D1B1B; 
+$borderColor-background: rgb(0, 0, 0);
 
 // !Modify variable bootstrap
 
 $primary: $principal;
 $dark: $prinipal-background;
+$body-bg: $background-body;
+$light: $borderColor-background;
 
+$font-family-sans-serif: 'Inter', sans-serif;
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap');
 
 @import "../../../node_modules/bootstrap/scss/bootstrap";

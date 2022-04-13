@@ -20,14 +20,14 @@ const Navegation = () => {
       <Navbar
         collapseOnSelect
         expand="lg"
-        className="bg-dark sidebar col-md-3 flex-column"
+        className="bg-dark sidebar col-md-3 flex-column border-end border-light"
         onSelect={(selectedKey) => alert(`selected ${selectedKey}`)}
       >
         <Navbar.Brand className="mt-4 mb-4 brand-media text-left">
           <h1 className="text-primary text-left text-uppercase">BuyNft</h1>
         </Navbar.Brand>
         <Container fluid className="bg-dark">
-          <Navbar.Toggle aria-controls="responsive-navbar-nav" />
+          <Navbar.Toggle aria-controls="responsive-navbar-nav" className="bg-primary" />
           <Navbar.Collapse id="responsive-navbar-nav">
             <Nav className="me-auto flex-column">
               <NavItem text="Dashboard" classPrimary="text-primary" icon={<StarFill size={26} />} />
