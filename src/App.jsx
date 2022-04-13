@@ -8,6 +8,7 @@ import React, {useState, useEffect} from "react";
 import Navegation from "./Pages/Nav/nav";
 import ComponentForm from "./Components/Form/form";
 import ComponentProfile from "./Components/Profile/profile";
+import Header from "./Pages/Header/Header";
 
 const App = () => {
   const [isActive, setIsActive] = useState(false);
@@ -44,6 +45,7 @@ const App = () => {
           <Col className="bg-body" xs={6}>
             {/* If it's to more 992px show, but if not show */}
             <ComponentForm breakpoint={isActive} />
+            <Header />
           </Col>
           <Col className="col-md-auto">
             {/* If it's to more 992px show, but if not show */}
