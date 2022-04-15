@@ -40,14 +40,14 @@ const App = () => {
     <>
       <Container fluid>
         <Row>
-          {/* If it's to more 992px show another components, bit if not also */}
           <Navegation breakpoint={breakpoint} />
-          <Col className="bg-body" xs={6}>
+          {/* If it's to more 992px show another components, bit if not also */}
+          <Col className="bg-body col-sm-6">
             {/* If it's to more 992px show, but if not show */}
             <ComponentForm breakpoint={isActive} />
             <Header />
           </Col>
-          <Col className="col-md-auto">
+          <Col className="col-sm-3">
             {/* If it's to more 992px show, but if not show */}
             <ComponentProfile breakpoint={isActive} />
           </Col>

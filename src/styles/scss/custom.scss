@@ -5,6 +5,7 @@ $principal: #D03852;
 $prinipal-background : #181717;
 $background-body:#1D1B1B; 
 $borderColor-background: rgb(0, 0, 0);
+$background-button: #ffffff;
 
 // !Modify variable bootstrap
 
@@ -12,6 +13,7 @@ $primary: $principal;
 $dark: $prinipal-background;
 $body-bg: $background-body;
 $light: $borderColor-background;
+$info: $background-button;
 
 $font-family-sans-serif: 'Inter', sans-serif;
 

@@ -19,7 +19,8 @@ const Header = () => {
     <Container>
       <ComponentCardBackground
         classGeneral="bg-body text-white border-0"
-        classTitle="text-sm-start fs-2"
+        classTitle="text-sm-start fs-2 col-4"
+        classBtn="btn-info"
         imageBackground={imageBackground}
         contentBtn="Start here"
         title="Create your own NFT"
