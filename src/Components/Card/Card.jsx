@@ -7,38 +7,42 @@ import {ErrorBoundary} from "react-error-boundary";
 
 import ErrorFallback from "../../Errors/ErrorFallback";
 
-const ComponentCard = ({title, text, image, imageSecond}) => {
-  //const {title, text} = content;
+const ComponentCard = (props) => {
+  const {titleString, textString, imageProfile, imageBackground, classGeneral, classBody} = props;
   return (
-    <ErrorBoundary FallbackComponent={ErrorFallback}>
-      <Card>
-        <Card.Image variant="top" src={image} />
-        <Card.Body>
-          <Row>
-            <Col>
-              <Card.Title>{title}</Card.Title>
-              <Row>
-                <Col>
-                  <Image src={imageSecond} fluid />
-                </Col>
-                <Col>
-                  <Card.Text>{text}</Card.Text>
-                </Col>
-              </Row>
-            </Col>
-            <Col />
-          </Row>
-        </Card.Body>
-      </Card>
-    </ErrorBoundary>
+    <>
+      <ErrorBoundary FallbackComponent={ErrorFallback}>
+        <Card className={classGeneral}>
+          <Card.Img variant="top" src={imageBackground} />
+          <Card.Body className={classBody}>
+            <Row>
+              <Col>
+                <Card.Title>{titleString}</Card.Title>
+                <Row>
+                  <Col>
+                    <Image src={imageProfile} fluid />
+                  </Col>
+                  <Col>
+                    <Card.Text>{textString}</Card.Text>
+                  </Col>
+                </Row>
+              </Col>
+              <Col />
+            </Row>
+          </Card.Body>
+        </Card>
+      </ErrorBoundary>
+    </>
   );
 };
 
 ComponentCard.propTypes = {
-  title: PropTypes.string,
-  text: PropTypes.string,
-  image: PropTypes.string,
-  imageSecond: PropTypes.string,
+  titleString: PropTypes.string.isRequired,
+  textString: PropTypes.string.isRequired,
+  imageProfile: PropTypes.string.isRequired,
+  imageBackground: PropTypes.string.isRequired,
+  classGeneral: PropTypes.string,
+  classBody: PropTypes.string,
 };
 
 export default ComponentCard;

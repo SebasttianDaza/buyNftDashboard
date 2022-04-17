@@ -3,7 +3,7 @@ import PropTypes from "prop-types";
 function ErrorFallback({error, resetErrorBoundary}) {
   return (
     <div role="alert">
-      <p>Something went wrong:</p>
+      <p className="text-danger">Something went wrong:</p>
       <pre className="text-white">{error.message}</pre>
       <button onClick={resetErrorBoundary}>Try again</button>
     </div>

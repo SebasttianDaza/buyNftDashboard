@@ -3,14 +3,12 @@ import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
 import PropTypes from "prop-types";
 
-import ComponentCard from "../../Components/Card/Card";
-
 import imageCard from "/image/imageCard.svg";
 import profileNtf from "/image/profileNtf.svg";
-
-import ComponentCardBackground from "../../Components/Card/CardBackground";
-
 import imageBackground from "/image/imageBackground.svg";
+
+import ComponentCard from "../../Components/Card/Card";
+import ComponentCardBackground from "../../Components/Card/CardBackground";
 
 const Header = ({breakpoint}) => {
   const content = {
@@ -31,15 +29,25 @@ const Header = ({breakpoint}) => {
       />
       <h3 className="text-white mt-3 mb-2 fs-2">Trending NFT</h3>
       <Row>
-        <Col md="auto">
+        <Col md="6">
           <ComponentCard
-            title="Wrost Artwork"
-            text="Tom Jones"
-            image={imageCard}
-            imageSecond={profileNtf}
+            classGeneral="bg-body text-white border-0 mt-3 mb-3"
+            titleString="Hola"
+            textString="Tom Jones"
+            imageProfile={profileNtf}
+            imageBackground={imageCard}
           />
         </Col>
-        <Col md="auto" />
+        <Col md="6">
+          <ComponentCard
+            classGeneral="bg-body text-white border-0 mt-3 mb-3"
+            classBody="bg-dark rounded"
+            titleString="Hola"
+            textString="Sebastian"
+            imageProfile={profileNtf}
+            imageBackground={imageCard}
+          />
+        </Col>
       </Row>
     </Container>
   );
