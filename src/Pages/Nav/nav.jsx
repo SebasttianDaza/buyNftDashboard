@@ -24,9 +24,7 @@ const Navegation = ({breakpoint}) => {
         collapseOnSelect
         expand="lg"
         className={
-          breakpoint
-            ? "bg-dark"
-            : "bg-dark sidebar fixed-top col-md-3 flex-column border-end border-light"
+          breakpoint ? "bg-dark" : "bg-dark sidebar col-md-3 flex-column border-end border-light"
         }
         onSelect={(selectedKey) => alert(`selected ${selectedKey}`)}
       >

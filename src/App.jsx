@@ -42,12 +42,12 @@ const App = () => {
         <Row>
           <Navegation breakpoint={breakpoint} />
           {/* If it's to more 992px show another components, bit if not also */}
-          <Col className="bg-body col-sm-6">
+          <Col className="bg-body" lg="6">
             {/* If it's to more 992px show, but if not show */}
             <ComponentForm breakpoint={isActive} />
-            <Header />
+            <Header breakpoint={breakpoint} />
           </Col>
-          <Col className="col-sm-3">
+          <Col lg="3">
             {/* If it's to more 992px show, but if not show */}
             <ComponentProfile breakpoint={isActive} />
           </Col>
