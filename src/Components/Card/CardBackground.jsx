@@ -10,14 +10,14 @@ const ComponentCardBackground = (props) => {
   return (
     <>
       <ErrorBoundary FallbackComponent={ErrorFallback}>
-        <Card className={classGeneral} style={{minHeight: "13vh"}}>
+        <Card className={classGeneral} style={{minHeight: "18vh"}}>
           <Card.Img
             src={imageBackground}
             loading="lazy"
             alt="Card Image"
-            style={{minHeight: "13vh"}}
+            style={{minHeight: "15vh"}}
           />
-          <Card.ImgOverlay className="">
+          <Card.ImgOverlay className="" style={{minHeight: "13vh"}}>
             <Card.Title className={classTitle}>{title}</Card.Title>
             <ButtonBackground Content={contentBtn} size={sizeBtn} classGeneral={classBtn} />
           </Card.ImgOverlay>
