@@ -33,8 +33,8 @@ const Header = ({breakpoint}) => {
       <Row>
         <Col md="6">
           <ComponentCard
-            classGeneral="bg-body text-white border-0 mt-2 mb-3"
-            classBody="bg-dark rounded"
+            classGeneral="bg-body text-white border-0 mt-2 mb-3 rounded"
+            classBody="bg-dark rounded-3"
             titleString="Wrost Artwork"
             textString="Tom Jones"
             imageProfile={profileNtf}
@@ -52,12 +52,12 @@ const Header = ({breakpoint}) => {
         </Col>
         <Col md="6">
           <ComponentCard
-            classGeneral="bg-body text-white border-0 mt-2 mb-3"
-            classBody="bg-dark rounded"
+            classGeneral="bg-body text-white border-0 mt-2 mb-3 rounded"
+            classBody="bg-dark rounded-3"
             titleString="Mual Artwork"
             textString="Mufasa"
             imageProfile={profileNtf}
-            imageBackground={imageCard}
+            imageBackground="https://firebasestorage.googleapis.com/v0/b/react-portfolio-863d8.appspot.com/o/Rectangle%206.svg?alt=media&token=01dcea91-10d4-4cb9-aab6-39bd298e2745"
             buttonCard={
               <Buttoncard
                 content="View"

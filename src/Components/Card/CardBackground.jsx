@@ -1,18 +1,29 @@
 import Card from "react-bootstrap/Card";
 import PropTypes from "prop-types";
+import {ErrorBoundary} from "react-error-boundary";
 
+import ErrorFallback from "../../Errors/ErrorFallback";
 import ButtonBackground from "../Buttons/buttonBackground";
 
 const ComponentCardBackground = (props) => {
   const {imageBackground, classGeneral, contentBtn, title, classTitle, classBtn, sizeBtn} = props;
   return (
-    <Card className={classGeneral}>
-      <Card.Img src={imageBackground} alt="Card Image" />
-      <Card.ImgOverlay className="">
-        <Card.Title className={classTitle}>{title}</Card.Title>
-        <ButtonBackground Content={contentBtn} size={sizeBtn} classGeneral={classBtn} />
-      </Card.ImgOverlay>
-    </Card>
+    <>
+      <ErrorBoundary FallbackComponent={ErrorFallback}>
+        <Card className={classGeneral} style={{minHeight: "13vh"}}>
+          <Card.Img
+            src={imageBackground}
+            loading="lazy"
+            alt="Card Image"
+            style={{minHeight: "13vh"}}
+          />
+          <Card.ImgOverlay className="">
+            <Card.Title className={classTitle}>{title}</Card.Title>
+            <ButtonBackground Content={contentBtn} size={sizeBtn} classGeneral={classBtn} />
+          </Card.ImgOverlay>
+        </Card>
+      </ErrorBoundary>
+    </>
   );
 };
 

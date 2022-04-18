@@ -4,7 +4,7 @@ import Image from "react-bootstrap/Image";
 import {Bell} from "react-bootstrap-icons";
 import PropTypes from "prop-types";
 
-import profile from "../../../public/image/profile.svg";
+import profile from "/image/profile.svg";
 
 const ComponentProfile = ({breakpoint, showChild}) => {
   return (

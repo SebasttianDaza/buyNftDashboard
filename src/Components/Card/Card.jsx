@@ -20,12 +20,17 @@ const ComponentCard = (props) => {
   return (
     <>
       <ErrorBoundary FallbackComponent={ErrorFallback}>
-        <Card className={classGeneral}>
-          <Card.Img variant="top" src={imageBackground} />
+        <Card className={classGeneral} style={{minHeight: "50vh"}}>
           <Card.Body className={classBody}>
+            <Card.Img
+              variant="top"
+              src={imageBackground}
+              loading="lazy"
+              style={{minHeight: "33vh"}}
+            />
             <Row>
               <Card.Title>{titleString}</Card.Title>
-              <Col>
+              <Col xs={7}>
                 <Row>
                   <Col>
                     <Image src={imageProfile} fluid />
