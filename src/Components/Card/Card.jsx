@@ -8,7 +8,15 @@ import {ErrorBoundary} from "react-error-boundary";
 import ErrorFallback from "../../Errors/ErrorFallback";
 
 const ComponentCard = (props) => {
-  const {titleString, textString, imageProfile, imageBackground, classGeneral, classBody} = props;
+  const {
+    titleString,
+    textString,
+    imageProfile,
+    imageBackground,
+    classGeneral,
+    classBody,
+    buttonCard,
+  } = props;
   return (
     <>
       <ErrorBoundary FallbackComponent={ErrorFallback}>
@@ -16,8 +24,8 @@ const ComponentCard = (props) => {
           <Card.Img variant="top" src={imageBackground} />
           <Card.Body className={classBody}>
             <Row>
+              <Card.Title>{titleString}</Card.Title>
               <Col>
-                <Card.Title>{titleString}</Card.Title>
                 <Row>
                   <Col>
                     <Image src={imageProfile} fluid />
@@ -27,7 +35,7 @@ const ComponentCard = (props) => {
                   </Col>
                 </Row>
               </Col>
-              <Col />
+              <Col>{buttonCard}</Col>
             </Row>
           </Card.Body>
         </Card>
@@ -43,6 +51,7 @@ ComponentCard.propTypes = {
   imageBackground: PropTypes.string.isRequired,
   classGeneral: PropTypes.string,
   classBody: PropTypes.string,
+  buttonCard: PropTypes.element.isRequired,
 };
 
 export default ComponentCard;
