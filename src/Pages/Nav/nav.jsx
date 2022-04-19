@@ -51,7 +51,10 @@ const Navegation = ({breakpoint}) => {
                 text="Favorites"
                 icon={<HeartFill size={26} />}
               />
-              <hr className="bg-secondary border-3 border-top border-white mt-5 mb-4" />
+              <hr
+                width="100%"
+                className="bg-secondary border-3 border-top border-white mt-5 mb-4"
+              />
               <Navbar.Brand>
                 <p className="text-primary text-uppercase">my profile</p>
               </Navbar.Brand>

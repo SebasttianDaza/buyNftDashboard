@@ -6,11 +6,20 @@ import ErrorFallback from "../../Errors/ErrorFallback";
 import ButtonBackground from "../Buttons/buttonBackground";
 
 const ComponentCardBackground = (props) => {
-  const {imageBackground, classGeneral, contentBtn, title, classTitle, classBtn, sizeBtn} = props;
+  const {
+    imageBackground,
+    classGeneral,
+    contentBtn,
+    title,
+    classTitle,
+    classBtn,
+    sizeBtn,
+    styleDefault,
+  } = props;
   return (
     <>
       <ErrorBoundary FallbackComponent={ErrorFallback}>
-        <Card className={classGeneral} style={{minHeight: "18vh"}}>
+        <Card className={classGeneral} style={styleDefault}>
           <Card.Img
             src={imageBackground}
             loading="lazy"
@@ -35,6 +44,7 @@ ComponentCardBackground.propTypes = {
   classTitle: PropTypes.string,
   classBtn: PropTypes.string,
   sizeBtn: PropTypes.string,
+  styleDefault: PropTypes.object,
 };
 
 export default ComponentCardBackground;

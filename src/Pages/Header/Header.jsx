@@ -2,11 +2,12 @@ import Container from "react-bootstrap/Container";
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
 import PropTypes from "prop-types";
-import {CurrencyBitcoin} from "react-bootstrap-icons";
+import CurrencyBitcoin from "react-bootstrap-icons/dist/icons/currency-bitcoin";
 
 import ComponentCard from "../../Components/Card/Card";
 import ComponentCardBackground from "../../Components/Card/CardBackground";
 import Buttoncard from "../../Components/Buttons/buttonCard";
+import CardBalance from "../../Components/Card/CardBalance";
 
 const Header = ({breakpoint}) => {
   const content = [
@@ -25,7 +26,7 @@ const Header = ({breakpoint}) => {
         imageProfile:
           "https://firebasestorage.googleapis.com/v0/b/react-portfolio-863d8.appspot.com/o/profileNtf.svg?alt=media&token=97ca32dd-45d3-499a-a9dd-a8116f668043",
         imageBackground:
-          "https://firebasestorage.googleapis.com/v0/b/react-portfolio-863d8.appspot.com/o/imageCard.svg?alt=media&token=c9b14b35-ba0e-418f-bc08-65b0177cc427",
+          "https://firebasestorage.googleapis.com/v0/b/react-portfolio-863d8.appspot.com/o/imageCard2.svg?alt=media&token=902f2e28-7bd4-4104-974b-286a4e026827",
       },
     ],
     [
@@ -52,6 +53,15 @@ const Header = ({breakpoint}) => {
         imageBackground="https://firebasestorage.googleapis.com/v0/b/react-portfolio-863d8.appspot.com/o/imageBackground.svg?alt=media&token=8ec888de-d2f0-48f6-a748-18aaf61a4fef"
         contentBtn="Start here"
         title="Create your own NFT"
+        styleDefault={{minHeight: "20vh"}}
+      />
+      <CardBalance
+        breakpoint={breakpoint}
+        styleDefault={{minHeight: "28vh"}}
+        classGeneral="bg-primary bg-gradient text-white text-center"
+        icon={<CurrencyBitcoin size={26} />}
+        inter={["mt-5 mb-5", "bg-white"]}
+        values={["Wallet Balance", "67.245"]}
       />
       <h3 className="text-white mt-3 mb-2 fs-2">Trending NFT</h3>
       <Row>
@@ -72,7 +82,7 @@ const Header = ({breakpoint}) => {
                     classGeneral="btn-info rounded-pill"
                     size="md"
                     variant="info"
-                    icon={<CurrencyBitcoin />}
+                    icon={<CurrencyBitcoin size={24} />}
                   />
                 }
               />
@@ -96,7 +106,7 @@ const Header = ({breakpoint}) => {
                     classGeneral="btn-info rounded-pill"
                     size="md"
                     variant="info"
-                    icon={<CurrencyBitcoin />}
+                    icon={<CurrencyBitcoin size={24} />}
                   />
                 }
               />

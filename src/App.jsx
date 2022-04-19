@@ -3,12 +3,14 @@ import Container from "react-bootstrap/Container";
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
 import React, {useState, useEffect} from "react";
+import CurrencyBitcoin from "react-bootstrap-icons/dist/icons/currency-bitcoin";
 
 //Components
 import Navegation from "./Pages/Nav/nav";
 import ComponentForm from "./Components/Form/form";
 import ComponentProfile from "./Components/Profile/profile";
 import Header from "./Pages/Header/Header";
+import CardBalance from "./Components/Card/CardBalance";
 
 const App = () => {
   const [isActive, setIsActive] = useState(false);
@@ -50,6 +52,14 @@ const App = () => {
           <Col lg="3">
             {/* If it's to more 992px show, but if not show */}
             <ComponentProfile breakpoint={isActive} />
+            <CardBalance
+              breakpoint={isActive}
+              styleDefault={{minHeight: "28vh"}}
+              classGeneral="bg-primary bg-gradient text-white text-center"
+              icon={<CurrencyBitcoin size={26} />}
+              inter={["mt-5 mb-5", "bg-white"]}
+              values={["Wallet Balance", "67.245"]}
+            />
           </Col>
         </Row>
       </Container>
