@@ -2,41 +2,19 @@
 import Container from "react-bootstrap/Container";
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
-import React, {useState, useEffect} from "react";
 import CurrencyBitcoin from "react-bootstrap-icons/dist/icons/currency-bitcoin";
 
 //Components
+import useMatchMedia from "./Hooks/handleMatchMedia";
 import Navegation from "./Pages/Nav/nav";
 import ComponentForm from "./Components/Form/form";
 import ComponentProfile from "./Components/Profile/profile";
 import Header from "./Pages/Header/Header";
 import CardBalance from "./Components/Card/CardBalance";
+import TableCreators from "./Components/Table/tableCreators";
 
 const App = () => {
-  const [isActive, setIsActive] = useState(false);
-  const [breakpoint, setBreakpoint] = useState(false);
-
-  //Show content about breakpoint
-  const indenrifyMatchMedia = () => {
-    let _breakpoint = window.matchMedia("(min-width: 992px)");
-
-    const checkElement = (e) => {
-      if (e.matches === true) {
-        setIsActive(true);
-        setBreakpoint(false);
-      } else {
-        setIsActive(false);
-        setBreakpoint(true);
-      }
-    };
-
-    _breakpoint.addListener(checkElement);
-    checkElement(_breakpoint);
-  };
-
-  useEffect(() => {
-    indenrifyMatchMedia();
-  }, []);
+  const [isActive, breakpoint] = useMatchMedia();
 
   return (
     <>
@@ -59,6 +37,10 @@ const App = () => {
               icon={<CurrencyBitcoin size={26} />}
               inter={["mt-5 mb-5", "bg-white"]}
               values={["Wallet Balance", "67.245"]}
+            />
+            <TableCreators
+              breakpoint={isActive}
+              classGeneral="bg-dark mt-5 border border-dark rounded-3 "
             />
           </Col>
         </Row>
