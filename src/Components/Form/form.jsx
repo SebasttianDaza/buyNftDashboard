@@ -5,7 +5,7 @@ import PropTypes from "prop-types";
 
 const ComponentForm = ({breakpoint}) => {
   return (
-    <Form className={breakpoint === false ? "d-none" : "mt-4 mb-4"}>
+    <Form className={!breakpoint ? "d-none" : "mt-4 mb-4"}>
       <InputGroup className="mb-3">
         <InputGroup.Text className="bg-dark text-secondary border-dark">
           <Search size={26} />
@@ -13,7 +13,7 @@ const ComponentForm = ({breakpoint}) => {
         <Form.Control
           type="search"
           placeholder="Search Keyword here"
-          className="bg-dark border-dark"
+          className={"bg-dark border-dark"}
         />
       </InputGroup>
     </Form>

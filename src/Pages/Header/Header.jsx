@@ -8,8 +8,10 @@ import ComponentCard from "../../Components/Card/Card";
 import ComponentCardBackground from "../../Components/Card/CardBackground";
 import Buttoncard from "../../Components/Buttons/buttonCard";
 import CardBalance from "../../Components/Card/CardBalance";
+import OffCanvasComponent from "../../Components/OffCanvas/OffCanvas";
+import TableCreators from "../../Components/Table/tableCreators";
 
-const Header = ({breakpoint}) => {
+const Header = ({breakpoint, dataTable}) => {
   const content = [
     [
       {
@@ -54,6 +56,23 @@ const Header = ({breakpoint}) => {
         contentBtn="Start here"
         title="Create your own NFT"
         styleDefault={{minHeight: "20vh"}}
+      />
+      <OffCanvasComponent
+        breakpoint={breakpoint}
+        content={
+          <TableCreators
+            breakpoint={breakpoint}
+            classComponent={[
+              "bg-dark border border-dark rounded-3",
+              "text-white text-uppercase",
+              "text-white",
+            ]}
+            contentText={["top creators", "See all"]}
+            data={dataTable}
+          />
+        }
+        contentBtn={["Show Content", "md", "primary", "my-4 mx-auto"]}
+        contentCanvas={["bg-body text-white", "More content"]}
       />
       <CardBalance
         breakpoint={breakpoint}
@@ -120,6 +139,7 @@ const Header = ({breakpoint}) => {
 
 Header.propTypes = {
   breakpoint: PropTypes.bool.isRequired,
+  dataTable: PropTypes.arrayOf(PropTypes.object).isRequired,
 };
 
 export default Header;

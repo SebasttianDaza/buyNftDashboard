@@ -7,33 +7,29 @@ import PropTypes from "prop-types";
 
 import Buttoncard from "../Buttons/buttonCard";
 
-const TableCreators = ({breakpoint, classGeneral}) => {
+const TableCreators = ({breakpoint, classComponent, contentText, data}) => {
+  const [classGeneral, classThead, classTbody] = classComponent;
+  const [titleString, SubtitlString] = contentText;
   return (
     <Container fluid className={classGeneral}>
       <Table striped hover className={!breakpoint ? "d-none" : ""}>
-        <thead>
-          <tr className="text-white text-uppercase">
-            <th>top creators</th>
-            <th>See all</th>
+        <thead className={classThead}>
+          <tr>
+            <th>{titleString}</th>
+            <th>{SubtitlString}</th>
           </tr>
         </thead>
-        <tbody>
-          <tr className="text-white">
-            <td>
-              <Row>
-                <Col xs={4}>
-                  <Image
-                    src="https://firebasestorage.googleapis.com/v0/b/react-portfolio-863d8.appspot.com/o/Polygon%201.svg?alt=media&token=7f1184e3-069b-4f01-b151-82bd26464c3e"
-                    fluid
-                  />
-                </Col>
-                <Col className="text-secondary">Sebastian</Col>
-              </Row>
-            </td>
-            <td>
-              <Buttoncard content="Follow" classGeneral="btn rounded" size="md" variant="primary" />
-            </td>
-          </tr>
+        <tbody className={classTbody}>
+          {data.map((item, index) => {
+            return (
+              <NewElementTable
+                key={index}
+                image={item.image}
+                name={item.name}
+                contentBtn={["Follow", "btn rounded", "md", "primary"]}
+              />
+            );
+          })}
         </tbody>
       </Table>
     </Container>
@@ -43,6 +39,36 @@ const TableCreators = ({breakpoint, classGeneral}) => {
 TableCreators.propTypes = {
   breakpoint: PropTypes.bool.isRequired,
   classGeneral: PropTypes.string.isRequired,
+  classComponent: PropTypes.arrayOf(PropTypes.string),
+  contentText: PropTypes.arrayOf(PropTypes.string),
+  data: PropTypes.arrayOf(PropTypes.object),
+};
+
+const NewElementTable = ({image, name, contentBtn}) => {
+  const [content, classBtn, size, variant] = contentBtn;
+  return (
+    <>
+      <tr>
+        <td>
+          <Row>
+            <Col xs={4}>
+              <Image src={image} fluid />
+            </Col>
+            <Col className="text-secondary">{name}</Col>
+          </Row>
+        </td>
+        <td>
+          <Buttoncard content={content} classGeneral={classBtn} size={size} variant={variant} />
+        </td>
+      </tr>
+    </>
+  );
+};
+
+NewElementTable.propTypes = {
+  image: PropTypes.string.isRequired,
+  name: PropTypes.string.isRequired,
+  contentBtn: PropTypes.arrayOf(PropTypes.string).isRequired,
 };
 
 export default TableCreators;

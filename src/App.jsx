@@ -16,6 +16,34 @@ import TableCreators from "./Components/Table/tableCreators";
 const App = () => {
   const [isActive, breakpoint] = useMatchMedia();
 
+  const dataTable = [
+    {
+      name: "Tom",
+      image:
+        "https://firebasestorage.googleapis.com/v0/b/react-portfolio-863d8.appspot.com/o/Polygon%201.svg?alt=media&token=7f1184e3-069b-4f01-b151-82bd26464c3e",
+    },
+    {
+      name: "Sebatian",
+      image:
+        "https://firebasestorage.googleapis.com/v0/b/react-portfolio-863d8.appspot.com/o/Polygon%201.svg?alt=media&token=7f1184e3-069b-4f01-b151-82bd26464c3e",
+    },
+    {
+      name: "Tom Jones",
+      image:
+        "https://firebasestorage.googleapis.com/v0/b/react-portfolio-863d8.appspot.com/o/Polygon%201.svg?alt=media&token=7f1184e3-069b-4f01-b151-82bd26464c3e",
+    },
+    {
+      name: "Tom",
+      image:
+        "https://firebasestorage.googleapis.com/v0/b/react-portfolio-863d8.appspot.com/o/Polygon%201.svg?alt=media&token=7f1184e3-069b-4f01-b151-82bd26464c3e",
+    },
+    {
+      name: "Sebas",
+      image:
+        "https://firebasestorage.googleapis.com/v0/b/react-portfolio-863d8.appspot.com/o/Polygon%201.svg?alt=media&token=7f1184e3-069b-4f01-b151-82bd26464c3e",
+    },
+  ];
+
   return (
     <>
       <Container fluid>
@@ -25,7 +53,7 @@ const App = () => {
           <Col className="bg-body" lg="6">
             {/* If it's to more 992px show, but if not show */}
             <ComponentForm breakpoint={isActive} />
-            <Header breakpoint={breakpoint} />
+            <Header breakpoint={breakpoint} dataTable={dataTable} />
           </Col>
           <Col lg="3">
             {/* If it's to more 992px show, but if not show */}
@@ -40,7 +68,13 @@ const App = () => {
             />
             <TableCreators
               breakpoint={isActive}
-              classGeneral="bg-dark mt-5 border border-dark rounded-3 "
+              classComponent={[
+                "bg-dark mt-5 border border-dark rounded-3",
+                "text-white text-uppercase",
+                "text-white",
+              ]}
+              contentText={["top creators", "See all"]}
+              data={dataTable}
             />
           </Col>
         </Row>

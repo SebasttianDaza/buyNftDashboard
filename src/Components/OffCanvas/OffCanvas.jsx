@@ -6,8 +6,12 @@ import Buttoncard from "../Buttons/buttonCard";
 import ErrorFallback from "../../Errors/ErrorFallback";
 import useLocalState from "../../Hooks/handleStateBasic";
 
-const OffCanvas = ({}) => {
+const OffCanvasComponent = ({breakpoint, content, contentBtn, contentCanvas}, ...props) => {
   const [show, setShow] = useLocalState(false);
+
+  //Props destructuring
+  const [contentText, size, variant, classBtn] = contentBtn;
+  const [classGeneral, textHeader] = contentCanvas;
 
   const handleClose = () => setShow(false);
   const handleShow = () => setShow(true);
@@ -15,15 +19,34 @@ const OffCanvas = ({}) => {
   return (
     <>
       <ErrorBoundary FallbackComponent={ErrorFallback}>
-        <Buttoncard content="Follow" classGeneral="btn rounded" size="md" variant="primary" />
+        <Buttoncard
+          content={contentText}
+          classGeneral={`btn rounded ${!breakpoint ? "d-none" : classBtn}`}
+          size={size}
+          variant={variant}
+          event={handleShow}
+        />
 
-        <Offcanvas show={show} onHide={handleClose}>
-          <Offcanvas.Header>
-            <Offcanvas.Title>Header</Offcanvas.Title>
+        <Offcanvas
+          show={show}
+          onHide={handleClose}
+          className={!breakpoint ? "d-none" : classGeneral}
+        >
+          <Offcanvas.Header closeButton {...props}>
+            <Offcanvas.Title>{textHeader}</Offcanvas.Title>
           </Offcanvas.Header>
-          <Offcanvas.Body>Header</Offcanvas.Body>
+          <Offcanvas.Body>{content}</Offcanvas.Body>
         </Offcanvas>
       </ErrorBoundary>
     </>
   );
 };
+
+OffCanvasComponent.propTypes = {
+  breakpoint: PropTypes.bool.isRequired,
+  content: PropTypes.element.isRequired,
+  contentBtn: PropTypes.arrayOf(PropTypes.string),
+  contentCanvas: PropTypes.arrayOf(PropTypes.element, PropTypes.string),
+};
+
+export default OffCanvasComponent;
