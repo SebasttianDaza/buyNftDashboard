@@ -17,7 +17,7 @@ import NavItem from "../../Components/NavItem/NavItem";
 import ComponentForm from "../../Components/Form/form";
 import ComponentProfile from "../../Components/Profile/profile";
 
-const Navegation = ({breakpoint}) => {
+const Navegation = ({breakpoint, image}) => {
   return (
     <>
       <Navbar
@@ -34,11 +34,7 @@ const Navegation = ({breakpoint}) => {
         <Container fluid className="bg-dark">
           <Navbar.Toggle aria-controls="responsive-navbar-nav" className="bg-primary border-0" />
           {/* if it's to more 992px show different */}
-          <ComponentProfile
-            breakpoint={breakpoint}
-            showChild={breakpoint}
-            image="https://firebasestorage.googleapis.com/v0/b/react-portfolio-863d8.appspot.com/o/profile.svg?alt=media&token=5de17334-89c1-4728-af9f-42c6f9ba4b0e"
-          />
+          <ComponentProfile breakpoint={breakpoint} showChild={breakpoint} image={image} />
           <Navbar.Collapse id="navbarToggleExternalContent">
             <Nav className="me-auto flex-column">
               {/* If it's to more 992px not show here */}
@@ -88,6 +84,7 @@ const Navegation = ({breakpoint}) => {
 
 Navegation.propTypes = {
   breakpoint: PropTypes.bool,
+  image: PropTypes.string,
 };
 
 export default Navegation;

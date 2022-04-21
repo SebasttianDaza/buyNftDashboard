@@ -10,6 +10,7 @@ import Buttoncard from "../../Components/Buttons/buttonCard";
 import CardBalance from "../../Components/Card/CardBalance";
 import OffCanvasComponent from "../../Components/OffCanvas/OffCanvas";
 import TableCreators from "../../Components/Table/tableCreators";
+import imageBackground from "../../../public/assets/image/imageBackgrouund-min.svg";
 
 const Header = ({breakpoint, dataTable}) => {
   const content = [
@@ -17,28 +18,22 @@ const Header = ({breakpoint, dataTable}) => {
       {
         titleString: "Wrost Artwork",
         textString: "Tom Jones",
-        imageProfile:
-          "https://firebasestorage.googleapis.com/v0/b/react-portfolio-863d8.appspot.com/o/profileNtf.svg?alt=media&token=97ca32dd-45d3-499a-a9dd-a8116f668043",
-        imageBackground:
-          "https://firebasestorage.googleapis.com/v0/b/react-portfolio-863d8.appspot.com/o/imageCard.svg?alt=media&token=c9b14b35-ba0e-418f-bc08-65b0177cc427",
+        imageProfile: "/public/assets/image/imageCardProfile-min.svg",
+        imageBackground: "/public/assets/image/imageCard2-min.svg",
       },
       {
         titleString: "Wrost Artwork",
         textString: "Sebastian",
-        imageProfile:
-          "https://firebasestorage.googleapis.com/v0/b/react-portfolio-863d8.appspot.com/o/profileNtf.svg?alt=media&token=97ca32dd-45d3-499a-a9dd-a8116f668043",
-        imageBackground:
-          "https://firebasestorage.googleapis.com/v0/b/react-portfolio-863d8.appspot.com/o/imageCard2.svg?alt=media&token=902f2e28-7bd4-4104-974b-286a4e026827",
+        imageProfile: "/public/assets/image/imageCardProfile-min.svg",
+        imageBackground: "/public/assets/image/imageCard2-min.svg",
       },
     ],
     [
       {
         titleString: "Mual Artwork",
         textString: "Mufasa",
-        imageProfile:
-          "https://firebasestorage.googleapis.com/v0/b/react-portfolio-863d8.appspot.com/o/profileNtf.svg?alt=media&token=97ca32dd-45d3-499a-a9dd-a8116f668043",
-        imageBackground:
-          "https://firebasestorage.googleapis.com/v0/b/react-portfolio-863d8.appspot.com/o/Rectangle%206.svg?alt=media&token=01dcea91-10d4-4cb9-aab6-39bd298e2745",
+        imageProfile: "/public/assets/image/imageCardProfile-min.svg",
+        imageBackground: "/public/assets/image/imageCard2-min.svg",
       },
     ],
   ];
@@ -52,7 +47,7 @@ const Header = ({breakpoint, dataTable}) => {
         classTitle={breakpoint ? "text-sm-start fs-5" : "text-sm-start fs-2 col-4"}
         classBtn="btn-info rounded-pill"
         sizeBtn={breakpoint ? "sm" : "lg"}
-        imageBackground="https://firebasestorage.googleapis.com/v0/b/react-portfolio-863d8.appspot.com/o/imageBackground.svg?alt=media&token=8ec888de-d2f0-48f6-a748-18aaf61a4fef"
+        imageBackground={imageBackground}
         contentBtn="Start here"
         title="Create your own NFT"
         styleDefault={{minHeight: "20vh"}}

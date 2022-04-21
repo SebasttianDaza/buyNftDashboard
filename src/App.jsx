@@ -5,6 +5,9 @@ import Col from "react-bootstrap/Col";
 import CurrencyBitcoin from "react-bootstrap-icons/dist/icons/currency-bitcoin";
 
 //Components
+
+import imageProfile from "/public/assets/image/imageProfile-min.svg";
+
 import useMatchMedia from "./Hooks/handleMatchMedia";
 import Navegation from "./Pages/Nav/nav";
 import ComponentForm from "./Components/Form/form";
@@ -19,28 +22,23 @@ const App = () => {
   const dataTable = [
     {
       name: "Tom",
-      image:
-        "https://firebasestorage.googleapis.com/v0/b/react-portfolio-863d8.appspot.com/o/Polygon%201.svg?alt=media&token=7f1184e3-069b-4f01-b151-82bd26464c3e",
+      image: "public/assets/image/imageCreators-min.svg",
     },
     {
       name: "Sebatian",
-      image:
-        "https://firebasestorage.googleapis.com/v0/b/react-portfolio-863d8.appspot.com/o/Polygon%201.svg?alt=media&token=7f1184e3-069b-4f01-b151-82bd26464c3e",
+      image: "public/assets/image/imageCreators-min.svg",
     },
     {
       name: "Tom Jones",
-      image:
-        "https://firebasestorage.googleapis.com/v0/b/react-portfolio-863d8.appspot.com/o/Polygon%201.svg?alt=media&token=7f1184e3-069b-4f01-b151-82bd26464c3e",
+      image: "public/assets/image/imageCreators-min.svg",
     },
     {
       name: "Tom",
-      image:
-        "https://firebasestorage.googleapis.com/v0/b/react-portfolio-863d8.appspot.com/o/Polygon%201.svg?alt=media&token=7f1184e3-069b-4f01-b151-82bd26464c3e",
+      image: "public/assets/image/imageCreators-min.svg",
     },
     {
       name: "Sebas",
-      image:
-        "https://firebasestorage.googleapis.com/v0/b/react-portfolio-863d8.appspot.com/o/Polygon%201.svg?alt=media&token=7f1184e3-069b-4f01-b151-82bd26464c3e",
+      image: "public/assets/image/imageCreators-min.svg",
     },
   ];
 
@@ -48,7 +46,7 @@ const App = () => {
     <>
       <Container fluid>
         <Row>
-          <Navegation breakpoint={breakpoint} />
+          <Navegation breakpoint={breakpoint} image={imageProfile} />
           {/* If it's to more 992px show another components, bit if not also */}
           <Col className="bg-body" lg="6">
             {/* If it's to more 992px show, but if not show */}
@@ -57,7 +55,7 @@ const App = () => {
           </Col>
           <Col lg="3">
             {/* If it's to more 992px show, but if not show */}
-            <ComponentProfile breakpoint={isActive} />
+            <ComponentProfile breakpoint={isActive} image={imageProfile} />
             <CardBalance
               breakpoint={isActive}
               styleDefault={{minHeight: "28vh"}}

@@ -21,7 +21,7 @@ const ComponentProfile = ({breakpoint, showChild, image}) => {
         </div>
       </Col>
       <Col className="col-md-auto">
-        <Image src={image} fluid />
+        <Image src={image} fluid loading="lazy" />
       </Col>
       <Col className={showChild === true ? "d-none" : "d-block"}>
         <h5 className="text-center text-secondary">Sebastian Daza</h5>
