@@ -4,9 +4,7 @@ import Image from "react-bootstrap/Image";
 import {Bell} from "react-bootstrap-icons";
 import PropTypes from "prop-types";
 
-import profile from "/image/profile.svg";
-
-const ComponentProfile = ({breakpoint, showChild}) => {
+const ComponentProfile = ({breakpoint, showChild, image}) => {
   return (
     <Row
       className={
@@ -23,7 +21,7 @@ const ComponentProfile = ({breakpoint, showChild}) => {
         </div>
       </Col>
       <Col className="col-md-auto">
-        <Image src={profile} fluid />
+        <Image src={image} fluid />
       </Col>
       <Col className={showChild === true ? "d-none" : "d-block"}>
         <h5 className="text-center text-secondary">Sebastian Daza</h5>
@@ -35,6 +33,7 @@ const ComponentProfile = ({breakpoint, showChild}) => {
 ComponentProfile.propTypes = {
   breakpoint: PropTypes.bool.isRequired,
   showChild: PropTypes.bool,
+  image: PropTypes.string,
 };
 
 export default ComponentProfile;

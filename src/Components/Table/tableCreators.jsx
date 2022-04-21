@@ -38,7 +38,6 @@ const TableCreators = ({breakpoint, classComponent, contentText, data}) => {
 
 TableCreators.propTypes = {
   breakpoint: PropTypes.bool.isRequired,
-  classGeneral: PropTypes.string.isRequired,
   classComponent: PropTypes.arrayOf(PropTypes.string),
   contentText: PropTypes.arrayOf(PropTypes.string),
   data: PropTypes.arrayOf(PropTypes.object),

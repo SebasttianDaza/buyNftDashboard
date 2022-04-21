@@ -6,7 +6,7 @@ import Buttoncard from "../Buttons/buttonCard";
 import ErrorFallback from "../../Errors/ErrorFallback";
 import useLocalState from "../../Hooks/handleStateBasic";
 
-const OffCanvasComponent = ({breakpoint, content, contentBtn, contentCanvas}, ...props) => {
+const OffCanvasComponent = ({breakpoint, content, contentBtn, contentCanvas}) => {
   const [show, setShow] = useLocalState(false);
 
   //Props destructuring
@@ -32,7 +32,7 @@ const OffCanvasComponent = ({breakpoint, content, contentBtn, contentCanvas}, ..
           onHide={handleClose}
           className={!breakpoint ? "d-none" : classGeneral}
         >
-          <Offcanvas.Header closeButton {...props}>
+          <Offcanvas.Header closeButton>
             <Offcanvas.Title>{textHeader}</Offcanvas.Title>
           </Offcanvas.Header>
           <Offcanvas.Body>{content}</Offcanvas.Body>
@@ -46,7 +46,7 @@ OffCanvasComponent.propTypes = {
   breakpoint: PropTypes.bool.isRequired,
   content: PropTypes.element.isRequired,
   contentBtn: PropTypes.arrayOf(PropTypes.string),
-  contentCanvas: PropTypes.arrayOf(PropTypes.element, PropTypes.string),
+  contentCanvas: PropTypes.arrayOf(PropTypes.string),
 };
 
 export default OffCanvasComponent;

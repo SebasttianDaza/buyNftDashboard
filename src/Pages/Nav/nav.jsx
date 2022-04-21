@@ -34,7 +34,11 @@ const Navegation = ({breakpoint}) => {
         <Container fluid className="bg-dark">
           <Navbar.Toggle aria-controls="responsive-navbar-nav" className="bg-primary border-0" />
           {/* if it's to more 992px show different */}
-          <ComponentProfile breakpoint={breakpoint} showChild={breakpoint} />
+          <ComponentProfile
+            breakpoint={breakpoint}
+            showChild={breakpoint}
+            image="https://firebasestorage.googleapis.com/v0/b/react-portfolio-863d8.appspot.com/o/profile.svg?alt=media&token=5de17334-89c1-4728-af9f-42c6f9ba4b0e"
+          />
           <Navbar.Collapse id="navbarToggleExternalContent">
             <Nav className="me-auto flex-column">
               {/* If it's to more 992px not show here */}
