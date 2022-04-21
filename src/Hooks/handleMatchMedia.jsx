@@ -23,7 +23,7 @@ export default function useMatchMedia() {
     };
     identifyMatchMedia();
     return () => {
-      _breakpoint.removeListener(checkElement);
+      identifyMatchMedia();
     };
   }, [setIsActive, setBreakpoint]);
 

@@ -22,23 +22,23 @@ const App = () => {
   const dataTable = [
     {
       name: "Tom",
-      image: "public/assets/image/imageCreators-min.svg",
+      image: "../public/assets/image/imageCreators-min.svg",
     },
     {
       name: "Sebatian",
-      image: "public/assets/image/imageCreators-min.svg",
+      image: "../public/assets/image/imageCreators-min.svg",
     },
     {
       name: "Tom Jones",
-      image: "public/assets/image/imageCreators-min.svg",
+      image: "../public/assets/image/imageCreators-min.svg",
     },
     {
       name: "Tom",
-      image: "public/assets/image/imageCreators-min.svg",
+      image: "../public/assets/image/imageCreators-min.svg",
     },
     {
       name: "Sebas",
-      image: "public/assets/image/imageCreators-min.svg",
+      image: "../public/assets/image/imageCreators-min.svg",
     },
   ];
 

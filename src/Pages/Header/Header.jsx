@@ -18,22 +18,22 @@ const Header = ({breakpoint, dataTable}) => {
       {
         titleString: "Wrost Artwork",
         textString: "Tom Jones",
-        imageProfile: "/public/assets/image/imageCardProfile-min.svg",
-        imageBackground: "/public/assets/image/imageCard2-min.svg",
+        imageProfile: "../../../public/assets/image/imageCardProfile-min.svg",
+        imageBackground: "../../../public/assets/image/imageCard2-min.svg",
       },
       {
         titleString: "Wrost Artwork",
         textString: "Sebastian",
-        imageProfile: "/public/assets/image/imageCardProfile-min.svg",
-        imageBackground: "/public/assets/image/imageCard2-min.svg",
+        imageProfile: "../../../public/assets/image/imageCardProfile-min.svg",
+        imageBackground: "../../../public/assets/image/imageCard2-min.svg",
       },
     ],
     [
       {
         titleString: "Mual Artwork",
         textString: "Mufasa",
-        imageProfile: "/public/assets/image/imageCardProfile-min.svg",
-        imageBackground: "/public/assets/image/imageCard2-min.svg",
+        imageProfile: "../../../public/assets/image/imageCardProfile-min.svg",
+        imageBackground: "../../../public/assets/image/imageCard2-min.svg",
       },
     ],
   ];
