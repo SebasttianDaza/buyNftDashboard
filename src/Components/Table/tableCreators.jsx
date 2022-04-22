@@ -51,7 +51,7 @@ const NewElementTable = ({image, name, contentBtn}) => {
         <td>
           <Row>
             <Col xs={4}>
-              <Image src={image} fluid />
+              <Image src={image} fluid loading="lazy" />
             </Col>
             <Col className="text-secondary">{name}</Col>
           </Row>

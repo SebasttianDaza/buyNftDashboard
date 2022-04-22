@@ -6,15 +6,15 @@ import CurrencyBitcoin from "react-bootstrap-icons/dist/icons/currency-bitcoin";
 
 //Components
 
-import imageProfile from "/public/assets/image/imageProfile-min.svg";
+import imageProfile from "/assets/image/imageProfile-min.svg";
 
-import useMatchMedia from "./Hooks/handleMatchMedia";
 import Navegation from "./Pages/Nav/nav";
 import ComponentForm from "./Components/Form/form";
 import ComponentProfile from "./Components/Profile/profile";
 import Header from "./Pages/Header/Header";
 import CardBalance from "./Components/Card/CardBalance";
 import TableCreators from "./Components/Table/tableCreators";
+import useMatchMedia from "./Hooks/handleMatchMedia";
 
 const App = () => {
   const [isActive, breakpoint] = useMatchMedia();
@@ -22,23 +22,23 @@ const App = () => {
   const dataTable = [
     {
       name: "Tom",
-      image: "../public/assets/image/imageCreators-min.svg",
+      image: "/assets/image/imageCreators-min.svg",
     },
     {
       name: "Sebatian",
-      image: "../public/assets/image/imageCreators-min.svg",
+      image: "/assets/image/imageCreators-min.svg",
     },
     {
       name: "Tom Jones",
-      image: "../public/assets/image/imageCreators-min.svg",
+      image: "/assets/image/imageCreators-min.svg",
     },
     {
       name: "Tom",
-      image: "../public/assets/image/imageCreators-min.svg",
+      image: "/assets/image/imageCreators-min.svg",
     },
     {
       name: "Sebas",
-      image: "../public/assets/image/imageCreators-min.svg",
+      image: "/assets/image/imageCreators-min.svg",
     },
   ];
 

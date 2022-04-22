@@ -1,16 +1,14 @@
 import {Navbar, Nav} from "react-bootstrap";
 import Container from "react-bootstrap/Container";
 import "./nav.css";
-import {
-  StarFill,
-  Shop,
-  BarChartLineFill,
-  HeartFill,
-  FolderFill,
-  CloudDownloadFill,
-  ClockHistory,
-  Gear,
-} from "react-bootstrap-icons";
+import StarFill from "react-bootstrap-icons/dist/icons/star-fill";
+import Shop from "react-bootstrap-icons/dist/icons/shop";
+import BarChartLineFill from "react-bootstrap-icons/dist/icons/bar-chart-line-fill";
+import HeartFill from "react-bootstrap-icons/dist/icons/heart-fill";
+import FolderFill from "react-bootstrap-icons/dist/icons/folder-fill";
+import CloudDownloadFill from "react-bootstrap-icons/dist/icons/cloud-download-fill";
+import ClockHistory from "react-bootstrap-icons/dist/icons/clock-history";
+import Gear from "react-bootstrap-icons/dist/icons/gear";
 import PropTypes from "prop-types";
 
 import NavItem from "../../Components/NavItem/NavItem";

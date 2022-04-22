@@ -10,7 +10,8 @@ import Buttoncard from "../../Components/Buttons/buttonCard";
 import CardBalance from "../../Components/Card/CardBalance";
 import OffCanvasComponent from "../../Components/OffCanvas/OffCanvas";
 import TableCreators from "../../Components/Table/tableCreators";
-import imageBackground from "../../../public/assets/image/imageBackgrouund-min.svg";
+
+import imageBackground from "/assets/image/imageBackgrouund-min.svg";
 
 const Header = ({breakpoint, dataTable}) => {
   const content = [
@@ -18,14 +19,14 @@ const Header = ({breakpoint, dataTable}) => {
       {
         titleString: "Wrost Artwork",
         textString: "Tom Jones",
-        imageProfile: "../../../public/assets/image/imageCardProfile-min.svg",
-        imageBackground: "../../../public/assets/image/imageCard2-min.svg",
+        imageProfile: "/assets/image/imageCardProfile-min.svg",
+        imageBackground: "/assets/image/imageCard2-min.svg",
       },
       {
         titleString: "Wrost Artwork",
         textString: "Sebastian",
-        imageProfile: "../../../public/assets/image/imageCardProfile-min.svg",
-        imageBackground: "../../../public/assets/image/imageCard2-min.svg",
+        imageProfile: "/assets/image/imageCardProfile-min.svg",
+        imageBackground: "/assets/image/imageCard2-min.svg",
       },
     ],
     [
@@ -44,7 +45,7 @@ const Header = ({breakpoint, dataTable}) => {
     <Container className={breakpoint ? "mt-3" : ""}>
       <ComponentCardBackground
         classGeneral="bg-body text-white border-0"
-        classTitle={breakpoint ? "text-sm-start fs-5" : "text-sm-start fs-2 col-4"}
+        classTitle={breakpoint ? "text-sm-start fs-5" : "text-sm-start fs-3 col-5"}
         classBtn="btn-info rounded-pill"
         sizeBtn={breakpoint ? "sm" : "lg"}
         imageBackground={imageBackground}
@@ -52,23 +53,25 @@ const Header = ({breakpoint, dataTable}) => {
         title="Create your own NFT"
         styleDefault={{minHeight: "20vh"}}
       />
-      <OffCanvasComponent
-        breakpoint={breakpoint}
-        content={
-          <TableCreators
-            breakpoint={breakpoint}
-            classComponent={[
-              "bg-dark border border-dark rounded-3",
-              "text-white text-uppercase",
-              "text-white",
-            ]}
-            contentText={["top creators", "See all"]}
-            data={dataTable}
-          />
-        }
-        contentBtn={["Show Content", "md", "primary", "my-4 mx-auto"]}
-        contentCanvas={["bg-body text-white", "More content"]}
-      />
+      <Container fluid className={!breakpoint ? "d-none" : ""}>
+        <OffCanvasComponent
+          breakpoint={breakpoint}
+          content={
+            <TableCreators
+              breakpoint={breakpoint}
+              classComponent={[
+                "bg-dark border border-dark rounded-3",
+                "text-white text-uppercase",
+                "text-white",
+              ]}
+              contentText={["top creators", "See all"]}
+              data={dataTable}
+            />
+          }
+          contentBtn={["Show Content", "md", "primary", "my-4"]}
+          contentCanvas={["bg-body text-white", "More content"]}
+        />
+      </Container>
       <CardBalance
         breakpoint={breakpoint}
         styleDefault={{minHeight: "28vh"}}

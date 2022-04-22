@@ -3,7 +3,6 @@ import ReactDOM from "react-dom";
 
 import App from "./App";
 
-import "./index.css";
 import "./styles/scss/custom.css";
 
 class Main extends React.Component {
