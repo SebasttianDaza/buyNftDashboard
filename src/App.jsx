@@ -47,6 +47,7 @@ const App = () => {
       <Container fluid>
         <Row>
           <Navegation breakpoint={breakpoint} image={imageProfile} />
+          <Col className={breakpoint ? "d-none" : ""} />
           {/* If it's to more 992px show another components, bit if not also */}
           <Col className="bg-body" lg="6">
             {/* If it's to more 992px show, but if not show */}

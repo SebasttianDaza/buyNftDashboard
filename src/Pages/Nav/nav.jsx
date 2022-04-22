@@ -1,7 +1,6 @@
 import Navbar from "react-bootstrap/Navbar";
 import Nav from "react-bootstrap/Nav";
 import Container from "react-bootstrap/Container";
-import "./nav.css";
 import {
   StarFill,
   Shop,
@@ -27,11 +26,13 @@ const Navegation = ({breakpoint, image}) => {
         className={
           breakpoint
             ? "bg-dark"
-            : "bg-dark sidebar col-md-3 flex-column border-end border-light  fixed-left"
+            : "bg-dark col-md-3 flex-column border-end border-light position-fixed bottom-0 top-0 zindex-fixed"
         }
         onSelect={(selectedKey) => alert(`selected ${selectedKey}`)}
       >
-        <Navbar.Brand className="mt-4 mb-4 brand-media text-left">
+        <Navbar.Brand
+          className={!breakpoint ? "mt-4 mb-4  text-left" : "mt-4 mb-4 d-none text-left"}
+        >
           <h1 className="text-primary text-left text-uppercase">BuyNft</h1>
         </Navbar.Brand>
         <Container fluid className="bg-dark">
