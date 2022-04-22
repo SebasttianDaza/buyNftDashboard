@@ -51,7 +51,11 @@ const Header = ({breakpoint, dataTable}) => {
     <Container className={breakpoint ? "mt-3" : ""}>
       <ComponentCardBackground
         classGeneral="bg-body text-white border-0"
-        classTitle={breakpoint ? "text-sm-start fs-5" : "text-sm-start fs-3 col-5"}
+        classTitle={
+          breakpoint
+            ? "text-sm-start fs-5 overflow-hidden"
+            : "text-sm-start fs-3 col-5 overflow-hidden"
+        }
         classBtn="btn-info rounded-pill"
         sizeBtn={breakpoint ? "sm" : "lg"}
         imageBackground={imageBackground}
@@ -93,7 +97,7 @@ const Header = ({breakpoint, dataTable}) => {
             return (
               <ComponentCard
                 key={index}
-                classGeneral="bg-body text-white border-0 mt-2 mb-3 rounded"
+                classGeneral="bg-body text-white border-0 mt-2 mb-3 rounded overflow-hidden"
                 classBody="bg-dark rounded-3"
                 titleString={item.titleString}
                 textString={item.textString}
@@ -117,7 +121,7 @@ const Header = ({breakpoint, dataTable}) => {
             return (
               <ComponentCard
                 key={index}
-                classGeneral="bg-body text-white border-0 mt-2 mb-3 rounded"
+                classGeneral="bg-body text-white border-0 mt-2 mb-3 rounded overflow-hidden"
                 classBody="bg-dark rounded-3"
                 titleString={item.titleString}
                 textString={item.textString}
