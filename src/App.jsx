@@ -58,7 +58,7 @@ const App = () => {
             <ComponentProfile breakpoint={isActive} image={imageProfile} />
             <CardBalance
               breakpoint={isActive}
-              styleDefault={{minHeight: "28vh"}}
+              styleDefault={{minHeight: "28vh", maxWidth: "23vw"}}
               classGeneral="bg-primary bg-gradient text-white text-center"
               icon={<CurrencyBitcoin size={26} />}
               inter={["mt-5 mb-5", "bg-white"]}

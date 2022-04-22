@@ -33,8 +33,14 @@ const Header = ({breakpoint, dataTable}) => {
       {
         titleString: "Mual Artwork",
         textString: "Mufasa",
-        imageProfile: "../../../public/assets/image/imageCardProfile-min.svg",
-        imageBackground: "../../../public/assets/image/imageCard2-min.svg",
+        imageProfile: "/assets/image/imageCardProfile-min.svg",
+        imageBackground: "/assets/image/imageCard2-min.svg",
+      },
+      {
+        titleString: "Mual Artwork",
+        textString: "Mufasa",
+        imageProfile: "/assets/image/imageCardProfile-min.svg",
+        imageBackground: "/assets/image/imageCard2-min.svg",
       },
     ],
   ];
@@ -51,7 +57,7 @@ const Header = ({breakpoint, dataTable}) => {
         imageBackground={imageBackground}
         contentBtn="Start here"
         title="Create your own NFT"
-        styleDefault={{minHeight: "20vh"}}
+        styleDefault={breakpoint ? {minHeight: "15vh"} : {minHeight: "20vh"}}
       />
       <Container fluid className={!breakpoint ? "d-none" : ""}>
         <OffCanvasComponent
